@@ -8,8 +8,8 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>My New Hugo Site</title>
-  <meta name="description" content="" />
+  <title>Work space for MissingJoe</title>
+  <meta name="description" content="Welcome to my personal blog. Hope there are some good notes helpfull for you here." />
 
   
   <link type="text/css" rel="stylesheet" href="https://MissingJoe.github.io/css/print.css" media="print">
@@ -24,17 +24,17 @@
   <link rel="shortcut icon" href="/favicon.png">
 
   
-  <link href="https://MissingJoe.github.io/index.xml" rel="alternate" type="application/rss+xml" title="My New Hugo Site" />
+  <link href="https://MissingJoe.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Work space for MissingJoe" />
   
 </head>
 
-  <body class=" ">
+  <body class="theme-base-08 ">
   <aside class="sidebar">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
-      <a href="https://MissingJoe.github.io/"><h1>My New Hugo Site</h1></a>
+      <a href="https://MissingJoe.github.io/"><h1>Work space for MissingJoe</h1></a>
       <p class="lead">
-      An elegant open source and mobile first theme for <a href="http://hugo.spf13.com">hugo</a> made by <a href="http://twitter.com/mdo">@mdo</a>. Originally made for Jekyll.
+       Welcome to my personal blog. Hope there are some good notes helpfull for you here. 
       </p>
     </div>
 
@@ -53,10 +53,20 @@
     <div class="posts">
 <article class="post">
   <h1 class="post-title">
-    <a href="https://MissingJoe.github.io/post/first/">First</a>
+    <a href="https://MissingJoe.github.io/post/algorithm/"></a>
   </h1>
-  <time datetime="2022-03-29T15:33:05&#43;0800" class="post-date">Tue, Mar 29, 2022</time>
-  Hello Hugo  aaa bbb ccc  
+  <time datetime="0001-01-01T00:00:00Z" class="post-date">Mon, Jan 1, 0001</time>
+  [toc]
+第一讲 Part 1 时间复杂度 简单的例子理解时间复杂度 一个有序数组A，另一个无序数组B，打印B数组中不在A数组中的数，假设A长度N，B长度M
+三种方法：
+  遍历B数组，每遍历一次B，直接遍历一次A数组看看有没有**（暴力法 O(MN)）**
+  遍历B数组，每遍历一次B，二分遍历一次A数组看看有没有**（二分查找 O(Mlog~2~N)）**
+  先把B排序，这时两个数组均有序，然后利用双指针思想，开始均指向数组的头。A中的值==小于==B中的值，A指针自增（说明当前B值在A值后方，有没有不知道），A中的值==等于==B中的值，B指针自增（说明当前B值在A中不输出，则直接找下一个，因为数组均排序，下一个数一定大，所以不存在漏找的情况），中的值==大于==B中的值，输出B元素，B指针自增（说明A中没有当前的B元素直接输出） （排序最好O(Mlog~2~M)+输出O(MN) 不一定比方法2好，分析N的值）。合并有序数组merge
+void printUnionAWithoutUnionB(int a[], int b[], int m, int n) { 	int a1 = 0, b1 = 0; 	while (a1 &lt; m &amp;&amp; b1 &lt; n) { 	if (a[a1] &lt; b[b1]) 	++a1; 	else if (a[a1] == b[b1]) 	++b1; 	else 	cout &lt;&lt; b[b1++] &lt;&lt; &#34; &#34;; 	} 	while (b1 &lt; n) 	cout &lt;&lt; b[b1++] &lt;&lt; &#34; &#34;; }   Part 2 对数器 对数器：比赛中debug用，样例过了，测试过不去
+  
+  <div class="read-more-link">
+    <a href="/post/algorithm/">Read More…</a>
+  </div>
   
 </article>
 </div>

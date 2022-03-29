@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My New Hugo Site</title>
+    <title>Work space for MissingJoe</title>
     <link>https://MissingJoe.github.io/</link>
-    <description>Recent content on My New Hugo Site</description>
+    <description>Recent content on Work space for MissingJoe</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 29 Mar 2022 15:33:05 +0800</lastBuildDate><atom:link href="https://MissingJoe.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://MissingJoe.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>First</title>
-      <link>https://MissingJoe.github.io/post/first/</link>
-      <pubDate>Tue, 29 Mar 2022 15:33:05 +0800</pubDate>
+      <title></title>
+      <link>https://MissingJoe.github.io/post/algorithm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://MissingJoe.github.io/post/first/</guid>
-      <description>Hello Hugo  aaa bbb ccc  </description>
+      <guid>https://MissingJoe.github.io/post/algorithm/</guid>
+      <description>[toc]
+第一讲 Part 1 时间复杂度 简单的例子理解时间复杂度 一个有序数组A，另一个无序数组B，打印B数组中不在A数组中的数，假设A长度N，B长度M
+三种方法：
+  遍历B数组，每遍历一次B，直接遍历一次A数组看看有没有**（暴力法 O(MN)）**
+  遍历B数组，每遍历一次B，二分遍历一次A数组看看有没有**（二分查找 O(Mlog~2~N)）**
+  先把B排序，这时两个数组均有序，然后利用双指针思想，开始均指向数组的头。A中的值==小于==B中的值，A指针自增（说明当前B值在A值后方，有没有不知道），A中的值==等于==B中的值，B指针自增（说明当前B值在A中不输出，则直接找下一个，因为数组均排序，下一个数一定大，所以不存在漏找的情况），中的值==大于==B中的值，输出B元素，B指针自增（说明A中没有当前的B元素直接输出） （排序最好O(Mlog~2~M)+输出O(MN) 不一定比方法2好，分析N的值）。合并有序数组merge
+void printUnionAWithoutUnionB(int a[], int b[], int m, int n) { 	int a1 = 0, b1 = 0; 	while (a1 &amp;lt; m &amp;amp;&amp;amp; b1 &amp;lt; n) { 	if (a[a1] &amp;lt; b[b1]) 	++a1; 	else if (a[a1] == b[b1]) 	++b1; 	else 	cout &amp;lt;&amp;lt; b[b1++] &amp;lt;&amp;lt; &amp;#34; &amp;#34;; 	} 	while (b1 &amp;lt; n) 	cout &amp;lt;&amp;lt; b[b1++] &amp;lt;&amp;lt; &amp;#34; &amp;#34;; }   Part 2 对数器 对数器：比赛中debug用，样例过了，测试过不去</description>
     </item>
     
   </channel>
